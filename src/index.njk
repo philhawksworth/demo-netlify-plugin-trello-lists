@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h2>A little help to get started</h2>
+  {% for card in trello.Guide.cards %}
+    <section>
+      <h3>{{ card.name }}</h3>
+      <div>
+        {{ card.desc  | markdown | safe }}
+      </div>
+    </section>
+  {% endfor %}
+
+  <h2>About Netlify Plugins</h2>
+  {% for card in trello.AboutPlugins.cards %}
+    <section>
+      <h3>{{ card.name }}</h3>
+      <div>
+        {{ card.desc  | markdown | safe }}
+      </div>
+    </section>
+  {% endfor %}
+
+
+</body>
+</html>

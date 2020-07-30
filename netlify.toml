@@ -1,0 +1,20 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+
+[[plugins]]
+  package = "@netlify/plugin-local-install-core"
+
+# Config for the Netlify Build Plugin: netlify-plugin-add-instagram
+[[plugins]]
+  package = "../netlify-plugin-trello-lists"
+
+  [plugins.inputs]
+
+    # The URL of as publicly visible Trello board
+    trelloBoardUrl = "https://trello.com/b/twPXW2W1/netlify-plugin-trello-list-info"
+
+    # Also stash data about the images in a json file
+    dataFilePath = "src/_data/trello.json"
+
