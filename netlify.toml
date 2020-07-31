@@ -6,15 +6,20 @@
 [[plugins]]
   package = "@netlify/plugin-local-install-core"
 
-# Config for the Netlify Build Plugin: netlify-plugin-add-instagram
+# Config for the Netlify Build Plugin: netlify-plugin-trello-lists
 [[plugins]]
-  package = "../netlify-plugin-trello-lists"
+  package = "netlify-plugin-trello-lists"
 
   [plugins.inputs]
 
-    # The URL of as publicly visible Trello board
+    # The URL of a publicly visible Trello board
     trelloBoardUrl = "https://trello.com/b/twPXW2W1/netlify-plugin-trello-list-info"
 
-    # Also stash data about the images in a json file
+    # Location of the JSON data file to be generated
     dataFilePath = "src/_data/trello.json"
+
+    # If the plugin fails, should it do so quietly or cancel the build?
+    # "failBuild" | "failPlugin"
+    fail = "failBuild"
+
 

@@ -13,7 +13,6 @@ module.exports = (eleventyConfig) => {
     return md.render(content);
   });
 
-
   return {
     dir: {
       input: "src",

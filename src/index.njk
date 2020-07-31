@@ -4,29 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
 
-  <h2>A little help to get started</h2>
-  {% for card in trello.Guide.cards %}
-    <section>
-      <h3>{{ card.name }}</h3>
-      <div>
-        {{ card.desc  | markdown | safe }}
-      </div>
-    </section>
-  {% endfor %}
+    <div class="tint">
+      <header>
+        <h1>Netlify Build Plugin - Trello List</h1>
+        <p class="subtitle">Get data for each list found in a public Trello board</p>
+      </header>
+    </div>
+    <main>
+      <h2>A little help to get started</h2>
+      {% for card in trello.Guide.cards %}
+        <section>
+          <h3>{{ card.name }}</h3>
+          <div>
+            {{ card.desc  | markdown | safe }}
+          </div>
+        </section>
+      {% endfor %}
 
-  <h2>About Netlify Plugins</h2>
-  {% for card in trello.AboutPlugins.cards %}
-    <section>
-      <h3>{{ card.name }}</h3>
-      <div>
-        {{ card.desc  | markdown | safe }}
-      </div>
-    </section>
-  {% endfor %}
+      <h2>About Netlify Plugins</h2>
+      {% for card in trello.AboutPlugins.cards %}
+        <section>
+          <h3>{{ card.name }}</h3>
+          <div>
+            {{ card.desc  | markdown | safe }}
+          </div>
+        </section>
+      {% endfor %}
 
+      </main>
+
+      <footer>
+        <section>
+          Made with <img class="netliheart" title="love" src="/images/netliheart.svg" alt="love" width="1em"> by the <a href="https://netlify.com">Netlify</a> team. Explore <a href="https://github.com/netlify/example-site-boilerplate">the code</a> in GitHub. Follow <a href="https://twitter.com/netlify">@Netliify</a> on Twitter for regular updates</a>.
+        </section>
+      </footer>
 
 </body>
 </html>
